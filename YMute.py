@@ -40,7 +40,7 @@ class MuteMod(loader.Module):
             mutes.setdefault(chatid, [])
         if str(user.id) not in mutes[chatid]:
             mutes[chatid].append(str(user.id))
-            self.db.set("YMmute", "mutes", mutes)
+            self.db.set("YMute", "mutes", mutes)
             await message.edit("<b>ХАХАХАХА КЛОУН ТЫ В МУТЕ.</b>")
         else:
             mutes[chatid].remove(str(user.id))
